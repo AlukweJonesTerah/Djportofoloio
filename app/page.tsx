@@ -64,7 +64,7 @@ export default function HomePage() {
         <div className="absolute inset-0 bg-gradient-to-br from-purple-900/50 to-black/80 z-10"></div>
         <div className="absolute inset-0">
           <Image
-            src="/gallery5.jpg?height=1080&width=1920"
+            src="/baaru_home.jpg?height=1080&width=1920"
             alt="DJ cree_thedj performing"
             fill
             className="object-cover"
@@ -124,7 +124,7 @@ export default function HomePage() {
       <section className="py-16 bg-gray-900">
         <div className="container mx-auto px-4 text-center">
           <p className="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-            Professional DJ blending Ampiano and Afrobeat vibes. Available for clubs, events, corporate, festivals, and private bookings.
+            Professional DJ blending all genres on music ranging from Amapiano, Afrobeats, EDM, Dancehall Reggae, RnB, Pop, Hiphop etc.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Badge variant="secondary" className="bg-purple-600/20 text-purple-300 px-4 py-2">

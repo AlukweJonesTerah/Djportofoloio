@@ -62,7 +62,7 @@ export default function AboutPage() {
                 </h1>
                 <p className="text-xl text-gray-300 mb-6">Real name: Christopher Baru</p>
                 <p className="text-lg text-gray-400 mb-8">
-                  Based Nairobi, Kenya • 2+ Years Active • Amapiano, Urbantone & Afrobeat Specialist
+                  Based Nairobi, Kenya • 2+ Years Active • Amapiano, Afrobeats, EDM, Dancehall Reggae, RnB, Pop, Hiphop
                 </p>
                 <div className="flex flex-wrap gap-3">
                   <Badge className="bg-purple-600/20 text-purple-300">Ampiano</Badge>
@@ -94,20 +94,13 @@ export default function AboutPage() {
               <h2 className="text-3xl font-bold mb-8 text-purple-400">My Journey</h2>
               <div className="prose prose-lg prose-invert">
                 <p className="text-gray-300 mb-6">
-                  What started as a passion for music in the vibrant streets of Nakuru Kabarak has evolved into a mission to
-                  bring people together through the universal language of beats. As cree_thedj, I specialize in creating
-                  seamless blends of House music with authentic Afrobeat rhythms, creating a unique sound that resonates
-                  with diverse audiences worldwide.
+                  My love for music began back in 2010 when I was first introduced to dancehall. The raw energy and rhythm instantly hooked me. By 2013, music had become more than just a hobby; it was my passion. I started learning the basics of DJing, experimenting with mixes, and teaching myself the art of blending beats. My breakthrough came in 2018 when I became fully confident and conversant with the decks, finally able to express myself through music. December 2023 marked a major milestone as I landed my first professional gig at Omega Gardens where I proudly became a resident DJ.
                 </p>
                 <p className="text-gray-300 mb-6">
-                  My musical influences span from the amapiano legends of South African to the Afrobeat pioneers of Nigeria.
-                  This fusion allows me to create sets that are both globally appealing and authentically African,
-                  bringing something fresh to every dance floor I touch.
+                  What started as a passion for music in the vibrant streets of Nakuru, Kabarak has now grown into a mission to unite people through the universal language of sound. As cree_thedj, I specialize in creating seamless blends of House music with authentic Afrobeat rhythms, producing a unique sound that resonates with diverse audiences. My musical influences span from Amapiano legends of South Africa to Afrobeat pioneers of Nigeria, fused with a wide spectrum of genres including EDM, Dancehall, Reggae, RnB, Pop, and Hip Hop.
                 </p>
                 <p className="text-gray-300">
-                  What drives my musical journey is the belief that music has the power to transcend boundaries. Whether
-                  I'm playing at an intimate rooftop party or a massive festival, my goal is always the same: to create
-                  moments where people forget their worries and lose themselves in the rhythm.
+                  What drives my musical journey is the belief that music has the power to transcend boundaries. Whether I’m playing at clubs, graduation parties, outdoor events, or private celebrations, my goal is always the same: to create unforgettable moments where people let go, feel the vibe, and lose themselves in the rhythm.
                 </p>
               </div>
             </div>

@@ -1,3 +1,5 @@
+"use client"
+
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
@@ -7,8 +9,25 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Badge } from "@/components/ui/badge"
 import { Mail, Phone, MapPin, Instagram, Youtube, Music2, Calendar, DollarSign, Clock } from "lucide-react"
 import Link from "next/link"
+import {useState} from "react"
 
 export default function ContactPage() {
+  const [selected, setSelected] = useState("");
+
+  const handleChange = (value) => {
+    setSelected(value);
+    if (value === "custom" || value === "discuss") {
+      window.open("/rateCard.pdf", "_blank");
+    }
+
+    const link = document.createElement("a");
+    link.href = "/rateCard.pdf";
+    link.download = "rateCardpdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
     <div className="min-h-screen bg-black text-white">
       {/* Navigation */}
@@ -158,16 +177,16 @@ export default function ContactPage() {
                       </div>
                       <div>
                         <Label className="text-purple-200" htmlFor="budget">Estimated Budget</Label>
-                        <Select>
+                        <Select onValueChange={handleChange}>
                           <SelectTrigger className="bg-gray-800 border-gray-700 text-white">
                             <SelectValue placeholder="Select budget range" />
                           </SelectTrigger>
                           <SelectContent>
-                            <SelectItem value="under-500">Under Ksh 7000</SelectItem>
-                            <SelectItem value="500-1m">Ksh 10000 - Ksh15000</SelectItem>
-                            <SelectItem value="1-2m">Ksh 20000 - Ksh 25000</SelectItem>
-                            <SelectItem value="2m+">Ksh30000+</SelectItem>
-                            <SelectItem value="discuss">Let's discuss</SelectItem>
+                            <SelectItem value="under-500">Under Ksh 15000</SelectItem>
+                            <SelectItem value="500-1m">Ksh 15000 - Ksh20000</SelectItem>
+                            <SelectItem value="1-2m">Ksh 25000 - Ksh 30000</SelectItem>
+                            <SelectItem value="2m+">Ksh35000+</SelectItem>
+                            <SelectItem value="discuss">Let's discuss - <a href="/rateCard.pdf" target="_blank" rel="noopener noreferrer">Download Rate card </a></SelectItem>
                           </SelectContent>
                         </Select>
                       </div>
@@ -175,7 +194,7 @@ export default function ContactPage() {
 
                     <div>
                       <Label className="text-purple-200" htmlFor="services">Services Needed</Label>
-                      <Select>
+                      <Select onValueChange={handleChange}>
                         <SelectTrigger className="bg-gray-800 border-gray-700 text-white">
                           <SelectValue placeholder="Select services" />
                         </SelectTrigger>
@@ -184,7 +203,9 @@ export default function ContactPage() {
                           <SelectItem value="dj-sound">DJ + Sound System</SelectItem>
                           <SelectItem value="dj-lights">DJ + Lighting</SelectItem>
                           <SelectItem value="full-package">Full Package (DJ + Sound + Lights)</SelectItem>
-                          <SelectItem value="custom">Custom Package</SelectItem>
+                          <SelectItem value="custom">
+                            Custom Package - Download Rate card
+                          </SelectItem>
                         </SelectContent>
                       </Select>
                     </div>
@@ -216,7 +237,7 @@ export default function ContactPage() {
                         <Mail className="h-5 w-5 text-purple-400" />
                         <div>
                           <p className="font-medium text-white">Email</p>
-                          <p className="text-gray-400">booking@cree_thedj.com</p>
+                          <p className="text-gray-400">chriscree059@gmail.com</p>
                         </div>
                       </div>
                       <div className="flex items-center gap-3">
@@ -287,14 +308,14 @@ export default function ContactPage() {
                         <DollarSign className="h-5 w-5 text-purple-400" />
                         <div>
                           <p className="text-white font-medium">Club/Private Events</p>
-                          <p className="text-gray-400">Starting at Ksh 7000</p>
+                          <p className="text-gray-400">Starting at Ksh 15000</p>
                         </div>
                       </div>
                       <div className="flex items-center gap-3">
                         <DollarSign className="h-5 w-5 text-purple-400" />
                         <div>
                           <p className="text-white font-medium">Festivals/Large Events</p>
-                          <p className="text-gray-400">Custom pricing available</p>
+                          <p className="text-gray-400"><a href="rateCard.pdf">Custom pricing available</a></p>
                         </div>
                       </div>
                       <div className="flex items-center gap-3">
@@ -302,6 +323,13 @@ export default function ContactPage() {
                         <div>
                           <p className="text-white font-medium">Response Time</p>
                           <p className="text-gray-400">Within 24 hours</p>
+                        </div>
+                      </div>
+                      <div className="flex items-center gap-3">
+                        <div>
+                          <Button size="lg" className="bg-purple-600 hover:bg-purple-700" onClick={handleChange}>
+                            Download Rate Card
+                          </Button>
                         </div>
                       </div>
                     </div>
